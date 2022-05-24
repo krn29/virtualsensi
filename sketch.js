@@ -2,7 +2,7 @@ let video;
 let poseNet;
 let pose;
 let skeleton;
-let count = 0 , prev = 'Y';
+let count = -1 , prev = 'Y';
 
 let brain;
 let poseLabel = "Stand";
@@ -98,26 +98,26 @@ function draw() {
   
     if(poseLabel== 'Y'){
       if(prev != 'Y') {
-        count += 1;
+        // count += 1;
         prev = 'Y';
       }
-      fill(0, 0, 0);
+      fill(255, 255, 255);
     noStroke();
     textSize(40);
     textAlign(CENTER, CENTER);
       console.log(count);
-      text("Standing", width / 2, height / 1.1);
+      text(`Standing - ${count}`, width / 2, height / 1.1);
     } else {
       if(prev == 'Y') {
         count += 1;
         prev = 'A';
       }
-      fill(0, 0, 0);
+      fill(255, 255, 255);
     noStroke();
     textSize(40);
     textAlign(CENTER, CENTER);
      console.log(count);
-      text('Sitting', width / 2, height/ 1.1);
+      text(`Sitting - ${count}`, width / 2, height/ 1.1);
       
    }
  
