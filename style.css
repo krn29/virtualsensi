@@ -1,8 +1,14 @@
+
 body {
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(to bottom right, red, yellow);
+  background-color: #e5e5f7;
+
+background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 30px 30px, linear-gradient(#444cf7 2.4000000000000004px, transparent 2.4000000000000004px) 0 -1.2000000000000002px, linear-gradient(90deg, #444cf7 2.4000000000000004px, #e5e5f7 2.4000000000000004px) -1.2000000000000002px 0;
+background-size: 60px 60px, 60px 60px, 30px 30px, 30px 30px;
+  
 }
+
 canvas {
   margin-top: 3%;
   display: block;
@@ -12,11 +18,12 @@ canvas {
   margin-right: auto;
   display: block;
   float: center;
+  
 }
 h1 {
   font-size: xx-large;
   text-align: center;
-  color: aliceblue;
+  color: black;
 }
 
 left {

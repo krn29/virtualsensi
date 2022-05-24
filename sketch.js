@@ -1,19 +1,8 @@
-// ml5.js: Pose Classification
-// The Coding Train / Daniel Shiffman
-// https://thecodingtrain.com/learning/ml5/7.2-pose-classification.html
-// https://youtu.be/FYgYyq-xqAw
-
-// All code: https://editor.p5js.org/codingtrain/sketches/JoZl-QRPK
-
-// Separated into three sketches
-// 1: Data Collection: https://editor.p5js.org/codingtrain/sketches/kTM0Gm-1q
-// 2: Model Training: https://editor.p5js.org/codingtrain/sketches/-Ywq20rM9
-// 3: Model Deployment: https://editor.p5js.org/codingtrain/sketches/c5sDNr8eM
-
 let video;
 let poseNet;
 let pose;
 let skeleton;
+let count = 0 , prev = 'Y';
 
 let brain;
 let poseLabel = "Stand";
@@ -106,26 +95,30 @@ function draw() {
     }
   }
   pop();
-function hello(){
-  textSize(69);
-  text('hello',width/2,height/2);
-  console.log('hellooo');
-}
-  // function outt(){
+  
     if(poseLabel== 'Y'){
-      fill(255, 0, 255);
+      if(prev != 'Y') {
+        count += 1;
+        prev = 'Y';
+      }
+      fill(0, 0, 0);
     noStroke();
-    textSize(69);
+    textSize(40);
     textAlign(CENTER, CENTER);
-      //console.log("Standing");
-      text("Standing", width / 2, height / 2);
+      console.log(count);
+      text("Standing", width / 2, height / 1.1);
     } else {
-      fill(255, 0, 255);
+      if(prev == 'Y') {
+        count += 1;
+        prev = 'A';
+      }
+      fill(0, 0, 0);
     noStroke();
-    textSize(69);
+    textSize(40);
     textAlign(CENTER, CENTER);
-      //console.log('sitting');
-      text('Sitting', width / 2, height / 2);
+     console.log(count);
+      text('Sitting', width / 2, height/ 1.1);
+      
    }
- // }
+ 
 }
