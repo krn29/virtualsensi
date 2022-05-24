@@ -120,5 +120,15 @@ function draw() {
       text(`Sitting - ${count}`, width / 2, height/ 1.1);
       
    }
+
+
+   if(count==10){
+    asgar({ 
+      title: "Congrats ", 
+      right: "Okay" 
+    }).then(() => {
+      console.log("OK");
+    });
+   }
  
 }
