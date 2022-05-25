@@ -124,7 +124,7 @@ function draw() {
 
    if(count==10){
     asgar({ 
-      title: "Congrats ", 
+      title: "congratulations Goal reached ", 
       right: "Okay" 
     }).then(() => {
       console.log("OK");
